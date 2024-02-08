@@ -1,0 +1,50 @@
+@import "app";
+
+html{
+
+    body{
+
+        .logo-style{
+            width:50px;
+            height:50px;
+            margin:auto;
+        }
+
+        .color-title{
+            @extend .title-color;
+        }
+
+        .css-uxa1ks-MuiListItem-root:hover{
+            @extend .title-background;
+            font-weight: bold;
+
+            .css-i4bv87-MuiSvgIcon-root{
+                color: #ffff;
+            }
+        }
+
+        .font-bold{
+            .MuiCardHeader-title{
+                font-weight: bold;
+            }
+        }
+
+        .css-1orzy9s {
+            margin-left: 2%;
+            width: auto;
+        }
+
+        li.MuiButtonBase-root:hover{
+            @extend .title-background;
+        }   
+        
+        .our-website{
+            @extend .title-color;
+        }
+    }
+
+}
+
+
+
+

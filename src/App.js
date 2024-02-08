@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { useCallback,useState,useEffect } from "react"
+import BaseSignin from "./pages/BaseSignin"
+import BasePages from './pages/BasePages'
+
+export default function App() {
+
+  const [isSingIn,setIsSingIn]=useState(false)
+  const checkUserSignIn = useCallback (() => {
+   
+    if(!localStorage.getItem('token')) 
+      logout()  // go to login route
+     else
+       setIsSingIn(true)  // login now OR already is login
+      
+},[])
+
+const logout= useCallback (()=>{
+  localStorage.removeItem("token")
+  localStorage.removeItem("user")
+  setIsSingIn(false)
+})
+
+useEffect(() => {
+    checkUserSignIn()
+  }, []); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <>
+    //   {(isSingIn)? 
+       <BasePages/> 
+  //        :
+  //     <BaseSignin/>}
+  //  </>
+  )
+
 }
 
-export default App;
+

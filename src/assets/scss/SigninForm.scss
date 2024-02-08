@@ -1,0 +1,50 @@
+@import "app";
+
+html{
+
+    body{
+
+        .css-ijul54-MuiTypography-root{
+         @extend .nav-button-color
+        }
+
+        .opacity-0-5{
+            opacity: .5;
+        }
+        
+        .css-lguxed-MuiAvatar-root{
+           @extend .title-background
+        }
+
+        .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{
+            color: rgb(255, 255, 255);
+        }
+
+        .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+            @extend .nav-button-color
+        }
+
+        .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+            border-color: rgb(255 255 255 / 23%);
+        }
+
+        .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
+            @extend .title-color;
+            font-weight:bold;
+        }
+
+        .css-11lq3yg-MuiGrid-root{
+            a {
+                @extend .title-color;
+            }
+        }
+
+        .css-ijul54-MuiTypography-root{
+            a {
+                @extend .title-color;
+            }
+        }
+        
+    }
+}
+

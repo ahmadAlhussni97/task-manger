@@ -1,0 +1,14 @@
+$color-font:#1976d2;
+$color-nav-button:rgb(255 255 255 / 60%);
+
+.title-color{
+    color:$color-font ;
+}
+
+.title-background {
+    background-color: $color-font;
+}
+
+.nav-button-color{
+    color:$color-nav-button;
+}

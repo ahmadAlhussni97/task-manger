@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import MainTitle from '../../components/titles/MainTitle';
 
 const columns = [
   { field: 'id', headerName: 'ID',type: 'number', width: 10 },
@@ -24,21 +25,10 @@ const rows = [
 
 export default function DataTable() {
   return (
+    <>
+   <MainTitle title="All Tasks" />
     <div className='home-table'>
-      <div style={{ height: '100%', width: '50%',marginTop:'1.5%' }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
-          pageSizeOptions={[5, 10,15,20,25,30,35,40,45,50]}
-          checkboxSelection
-        />
-      </div>
-      <div style={{ height: '100%', width: '50%',marginTop:'1.5%' }}>
+      <div style={{ height: '100%', width: '100%',marginTop:'1.5%' }}>
         <DataGrid
           rows={rows}
           columns={columns}
@@ -52,5 +42,6 @@ export default function DataTable() {
         />
       </div>
     </div>
+    </>
   );
 }

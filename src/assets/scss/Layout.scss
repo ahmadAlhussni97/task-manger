@@ -14,6 +14,12 @@ html{
             @extend .title-color;
         }
 
+        
+        .table{
+            display: flex;
+            gap: 15px;
+          }
+
         .css-uxa1ks-MuiListItem-root:hover{
             @extend .title-background;
             font-weight: bold;
@@ -41,6 +47,22 @@ html{
         .our-website{
             @extend .title-color;
         }
+
+        .active-menu{
+            @extend .title-background;
+            font-weight: bold;
+        }
+        
+        .link-sidebar{
+         text-decoration: none;
+         color: unset;
+        }
+
+        .css-10hburv-MuiTypography-root {
+            font-weight: bolder;
+        }
+
+    
     }
 
 }

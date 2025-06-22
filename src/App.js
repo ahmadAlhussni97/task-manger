@@ -1,17 +1,19 @@
 
-import { useCallback,useState,useEffect } from "react"
+import { useCallback,useState,useEffect,createContext } from "react"
 import BaseSignin from "./pages/BaseSignin"
 import BasePages from './pages/BasePages'
+
+export const UserContext = createContext() 
 
 export default function App() {
 
   const [isSingIn,setIsSingIn]=useState(false)
   const checkUserSignIn = useCallback (() => {
-   
+
     if(!localStorage.getItem('token')) 
       logout()  // go to login route
      else
-       setIsSingIn(true)  // login now OR already is login
+      setIsSingIn(true)  // login now OR already is login
       
 },[])
 
@@ -26,12 +28,14 @@ useEffect(() => {
   }, []); 
 
   return (
-    // <>
-    //   {(isSingIn)? 
-       <BasePages/> 
-  //        :
-  //     <BaseSignin/>}
-  //  </>
+    <>
+      <UserContext.Provider value={logout}>
+        {/* {(isSingIn)?  */}
+        <BasePages/> 
+           {/* : */}
+        {/* <BaseSignin/> */}
+      </UserContext.Provider>
+   </>
   )
 
 }

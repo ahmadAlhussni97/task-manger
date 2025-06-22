@@ -9,6 +9,15 @@ html{
         background-color: #101418;
         color: white;
         #root{
+
+            .css-1ri6ub7-MuiPaper-root-MuiCard-root{
+                background-color: $background;
+
+                .MuiTypography-root{
+                    color: white;
+                }
+               
+            }
             .css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
                 color:$font-color;
                 background-color:$background;

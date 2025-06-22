@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext } from 'react'
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -12,10 +12,14 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
+import { useNavigate } from "react-router-dom";
+import {UserContext} from '../../App'
 
 export default function Rightside() {
 
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const logoutContext = useContext(UserContext);
+    const navigate = useNavigate();
 
 
     const handleOpenUserMenu = (event) => {
@@ -66,21 +70,21 @@ export default function Rightside() {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}>
             
-            <MenuItem onClick={handleCloseUserMenu}>
+            <MenuItem onClick={()=>navigate('/profile')}>
             <ListItemIcon>
                 <PersonAdd fontSize="small" />
             </ListItemIcon>
             Profile
             </MenuItem>
 
-            <MenuItem onClick={handleCloseUserMenu}>
+            <MenuItem onClick={()=>navigate('/setting')}>
             <ListItemIcon>
                 <Settings fontSize="small" />
             </ListItemIcon>
             Setting
             </MenuItem>
 
-            <MenuItem onClick={handleCloseUserMenu}>
+            <MenuItem onClick={()=>logoutContext()}>
             <ListItemIcon>
                 <Logout fontSize="small" />
             </ListItemIcon>

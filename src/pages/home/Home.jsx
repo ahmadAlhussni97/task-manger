@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -13,7 +11,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import TaskIcon from '@mui/icons-material/Task';
-import Table from '../../components/tables/Table'
+import HomeTable from '../../components/tables/HomeTable'
 import  '../../assets/scss/Home.scss'
 
 
@@ -105,7 +103,7 @@ export default function Home() {
               </CardContent>
               <CardActions>
                 <Button variant="outlined" href="#outlined-buttons">
-              <VisibilityIcon />    <span className='dashboard-details'>Details</span>
+                 <VisibilityIcon />    <span className='dashboard-details'>Details</span>
               </Button>
               </CardActions>
            </Card>
@@ -114,7 +112,7 @@ export default function Home() {
         </Grid>
       </Grid>
     </Box>
-    <Table />
+    <HomeTable />
     </div>
    
   );

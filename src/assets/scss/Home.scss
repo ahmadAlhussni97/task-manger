@@ -30,6 +30,11 @@ html{
       .css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover{
         @extend .title-background;
       }
+
+      .home-table{
+        display: flex;
+        gap: 20px;
+      }
         
    }
   
